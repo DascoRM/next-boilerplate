@@ -8,6 +8,10 @@
   "plugins": ["prettier", "tailwindcss"],
   "rules": {
     "prettier/prettier": "error",
-    "tailwindcss/classnames-order": "warn"
+    "tailwindcss/classnames-order": "warn",
+    "indent": ["error", 2],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "no-unused-vars": "warn"
   }
 }
