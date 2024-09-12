@@ -9,6 +9,7 @@ Easy experience, we have add a lot of plugins
     - Pretier
     - [Husky](https://typicode.github.io/husky/) Modern native git hooks
     - [Vitest](https://vitest.dev) Unit testing with Vitest for Next library
+
 ## Getting Started
 
 First, run the development server:
@@ -44,13 +45,16 @@ import { useTranslation } from 'next-i18next'
 ```
 
 # Vitest
+
 ### How to use
 
 ```
 $ npm run test
 ```
-Write your test on *./tests* folder
+
+Write your test on _./tests_ folder
 Exmple:
+
 ```
 // exemple.test.tsx
 
