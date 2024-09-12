@@ -8,7 +8,7 @@ Easy experience, we have add a lot of plugins
     - ESlint
     - Pretier
     - [Husky](https://typicode.github.io/husky/) Modern native git hooks
-
+    - [Vitest](https://vitest.dev) Unit testing with Vitest for Next library
 ## Getting Started
 
 First, run the development server:
@@ -43,22 +43,26 @@ import { useTranslation } from 'next-i18next'
     <h1>{ t('welcome') }</h1>
 ```
 
-=======
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-# I18N
-
-[Check documentation](https://github.com/i18next/next-i18next#next-i18nextconfigjs)
-
+# Vitest
 ### How to use
 
 ```
-import { useTranslation } from 'next-i18next'
-    const { t } = useTranslation('common')
-
-    <h1>{ t('welcome') }</h1>
+$ npm run test
 ```
+Write your test on *./tests* folder
+Exmple:
+```
+// exemple.test.tsx
 
-> > > > > > > aea2431 (feat: first commit)
+import { expect, test } from 'vitest';
+import { render, screen } from '@testing-library/react';
+import Test from '../src/pages/test';
+
+test('Page', () => {
+  render(<Test />);
+  expect(
+    screen.getByRole('heading', { level: 1, name: 'welcome' })
+  ).toBeDefined();
+});
+
+```
