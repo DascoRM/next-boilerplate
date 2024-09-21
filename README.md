@@ -70,3 +70,50 @@ test('Page', () => {
 });
 
 ```
+
+# Storybook
+
+### Run story
+
+```
+$ npm run storybook
+```
+
+# Supabase
+
+### Supabase container
+
+Supabase run from Docker, the docker-compose file build and run supabase and database. This is a three container:
+
+- Nextjs: => port 3000
+- Supabase: => port 8000
+- DB: => port 5432
+
+Architecture:
+/app
+
+- Nextjs project
+  /supabase
+- Supabase project
+
+Check documentation supabase for run this app and deploy:
+[Here](https://supabase.com/docs/guides/self-hosting/docker)
+
+# Docker
+
+### For nextjs
+
+#### Build
+
+```
+$ docker build -f Dockerfile.dev -t name_of_app .
+```
+
+```
+$ docker run -p 3000:3000 name_of_app
+```
+
+```
+$ sudo docker pull node:18-alpine
+$ sudo docker compose up -d dev # or prod if you're in production mode
+```
